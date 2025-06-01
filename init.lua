@@ -267,6 +267,9 @@ require('lazy').setup({
   --        end,
   --    }
   --
+  {
+    'ThePrimeagen/vim-be-good'
+  },
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`.
   --
