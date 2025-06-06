@@ -290,58 +290,58 @@ require('lazy').setup({
   --        end,
   --    }
   --
-  {
-    'alexghergh/nvim-tmux-navigation',
-    config = function()
-      local nvim_tmux_nav = require 'nvim-tmux-navigation'
-
-      nvim_tmux_nav.setup {
-        disable_when_zoomed = true, -- defaults to false
-      }
-
-      vim.keymap.set('n', '<C-h>', nvim_tmux_nav.NvimTmuxNavigateLeft)
-      vim.keymap.set('n', '<C-j>', nvim_tmux_nav.NvimTmuxNavigateDown)
-      vim.keymap.set('n', '<C-k>', nvim_tmux_nav.NvimTmuxNavigateUp)
-      vim.keymap.set('n', '<C-l>', nvim_tmux_nav.NvimTmuxNavigateRight)
-      vim.keymap.set('n', '<C-\\>', nvim_tmux_nav.NvimTmuxNavigateLastActive)
-      vim.keymap.set('n', '<C-Space>', nvim_tmux_nav.NvimTmuxNavigateNext)
-    end,
-  },
-  {
-    'nvim-tree/nvim-tree.lua',
-    version = '*',
-    lazy = false,
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    config = function()
-      require('nvim-tree').setup {
-        filters = {
-          dotfiles = false,
-        },
-      }
-    end,
-  },
-  {
-    'kdheepak/lazygit.nvim',
-    lazy = true,
-    cmd = {
-      'LazyGit',
-      'LazyGitConfig',
-      'LazyGitCurrentFile',
-      'LazyGitFilter',
-      'LazyGitFilterCurrentFile',
-    },
-    -- optional for floating window border decoration
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
-    keys = {
-      { '<leader>g', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
-    },
-  },
+  --  {
+  --    'alexghergh/nvim-tmux-navigation',
+  --    config = function()
+  --      local nvim_tmux_nav = require 'nvim-tmux-navigation'
+  --
+  --      nvim_tmux_nav.setup {
+  --        disable_when_zoomed = true, -- defaults to false
+  --      }
+  --
+  --      vim.keymap.set('n', '<C-h>', nvim_tmux_nav.NvimTmuxNavigateLeft)
+  --      vim.keymap.set('n', '<C-j>', nvim_tmux_nav.NvimTmuxNavigateDown)
+  --      vim.keymap.set('n', '<C-k>', nvim_tmux_nav.NvimTmuxNavigateUp)
+  --      vim.keymap.set('n', '<C-l>', nvim_tmux_nav.NvimTmuxNavigateRight)
+  --      vim.keymap.set('n', '<C-\\>', nvim_tmux_nav.NvimTmuxNavigateLastActive)
+  --      vim.keymap.set('n', '<C-Space>', nvim_tmux_nav.NvimTmuxNavigateNext)
+  --    end,
+  --  },
+  --  {
+  --    'nvim-tree/nvim-tree.lua',
+  --    version = '*',
+  --    lazy = false,
+  --    dependencies = {
+  --      'nvim-tree/nvim-web-devicons',
+  --    },
+  --    config = function()
+  --      require('nvim-tree').setup {
+  --        filters = {
+  --          dotfiles = false,
+  --        },
+  --      }
+  --    end,
+  --  },
+  --  {
+  --    'kdheepak/lazygit.nvim',
+  --    lazy = true,
+  --    cmd = {
+  --      'LazyGit',
+  --      'LazyGitConfig',
+  --      'LazyGitCurrentFile',
+  --      'LazyGitFilter',
+  --      'LazyGitFilterCurrentFile',
+  --    },
+  --    -- optional for floating window border decoration
+  --    dependencies = {
+  --      'nvim-lua/plenary.nvim',
+  --    },
+  --    -- setting the keybinding for LazyGit with 'keys' is recommended in
+  --    -- order to load the plugin when the command is run for the first time
+  --    keys = {
+  --      { '<leader>g', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+  --    },
+  --  },
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`.
   --
@@ -1059,7 +1059,7 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
