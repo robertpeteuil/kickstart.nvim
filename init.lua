@@ -184,7 +184,7 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 vim.lsp.enable 'bashls'
 
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>', { desc = 'Toggle Tree [E]xplorer' })
+vim.keymap.set('n', '<leader>e', ':Neotree toggle<cr>', { desc = 'Toggle Tree [E]xplorer' })
 
 -- END PERSONAL
 
