@@ -3,11 +3,13 @@ return {
   branch = 'v3.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
-    -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
   },
-  lazy = false, -- neo-tree will lazily load itself
+  lazy = false,
+  keys = {
+    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+  },
   ---@module "neo-tree"
   ---@type neotree.Config?
   opts = {
@@ -32,14 +34,17 @@ return {
         },
         never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
           '.DS_Store',
-          --"thumbs.db"
         },
         never_show_by_pattern = { -- uses glob style patterns
           --".null-ls_*",
         },
       },
+      window = {
+        mappings = {
+          ['\\'] = 'close_window',
+        },
+      },
     },
     use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
-    -- instead of relying on nvim autocmd events.
   },
 }
