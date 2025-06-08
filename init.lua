@@ -107,9 +107,9 @@ vim.api.nvim_create_autocmd({ 'BufLeave' }, {
   end,
 })
 
--- these maps require iterm config to pass keys to terminal
-vim.keymap.set('n', '<A-j>', ':m .+1<CR>==') -- move line down
-vim.keymap.set('n', '<A-k>', ':m .-2<CR>==') -- move line up
+-- Meta keybinds require setting iTerm profile key bindings to send Esc+ for left option key
+vim.keymap.set('n', '<M-j>', ':m .+1<CR>==') -- move line down
+vim.keymap.set('n', '<M-k>', ':m .-2<CR>==') -- move line up
 
 -- vim.keymap.set('n', '<leader>e', ':Neotree toggle<cr>', { desc = 'Toggle Tree [E]xplorer' })
 -- END PERSONAL
