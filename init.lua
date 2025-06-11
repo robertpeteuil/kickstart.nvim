@@ -105,6 +105,9 @@ vim.api.nvim_create_autocmd({ 'BufLeave' }, {
   end,
 })
 
+-- leader key mappings
+vim.keymap.set('n', '<leader>b', ':Neotree buffers<CR>', { desc = 'Explore [B]uffers' })
+
 -- Meta keybinds require setting iTerm profile key bindings to send Esc+ for left option key
 vim.keymap.set('n', '<M-j>', ':m .+1<CR>==') -- move line down
 vim.keymap.set('n', '<M-k>', ':m .-2<CR>==') -- move line up
