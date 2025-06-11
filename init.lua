@@ -791,6 +791,8 @@ require('lazy').setup({
         styles = {
           comments = { italic = false }, -- Disable italics in comments
           keywords = { italic = false }, -- Disable italics in keywords
+          sidebars = 'transparent',
+          floats = 'transparent',
         },
       }
 
