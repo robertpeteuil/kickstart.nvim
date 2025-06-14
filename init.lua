@@ -97,6 +97,7 @@ vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a T
 vim.o.softtabstop = 2 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 2 -- Number of spaces inserted when indenting
 
+-- refresh neo-tree for lazygit hanges
 vim.api.nvim_create_autocmd({ 'BufLeave' }, {
   pattern = { '*lazygit*' },
   group = vim.api.nvim_create_augroup('git_refresh_neotree', { clear = true }),
@@ -104,6 +105,11 @@ vim.api.nvim_create_autocmd({ 'BufLeave' }, {
     require('neo-tree.sources.filesystem.commands').refresh(require('neo-tree.sources.manager').get_state 'filesystem')
   end,
 })
+
+-- keymap to insert date into register d
+vim.keymap.set('n', '<leader>d', function()
+  vim.fn.setreg('d', os.date '%Y-%m-%d', 'c')
+end, { desc = 'Update register timestamp' })
 
 -- leader key mappings
 vim.keymap.set('n', '<leader>b', ':Neotree buffers<CR>', { desc = 'Explore [B]uffers' })
