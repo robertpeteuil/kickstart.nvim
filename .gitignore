@@ -4,3 +4,6 @@ test.sh
 nvim
 
 spell/
+# migration files
+lua.old/
+init.lua.old
